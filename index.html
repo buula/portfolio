@@ -72,13 +72,43 @@
               <p class="project-wrapper__text-info">
                 A simple card game built in Python using object-oriented programming concepts to demonstrate logic and inheritance.
               </p>
+              <button onclick="toggleDetails()" class="cta-btn text-color-main">View Instructions & Code</button>
+          
+              <div id="cardgame-details" style="display: none; margin-top: 1rem;">
+                <h4>🎮 How to Play</h4>
+                <p>
+                  This card game is played between two virtual players. Each draws a random card from a deck. The player with the higher card wins the round. The game continues until the deck is exhausted.
+                </p>
+                <h4>💻 Code Snippet</h4>
+                <pre><code class="language-python">
+          class Card:
+              def __init__(self, suit, rank):
+                  self.suit = suit
+                  self.rank = rank
+          
+              def value(self):
+                  values = {'2': 2, '3': 3, ..., 'Ace': 14}
+                  return values[self.rank]
+          
+          class Deck:
+              def __init__(self):
+                  self.cards = [Card(s, r) for s in suits for r in ranks]
+                  random.shuffle(self.cards)
+          
+              def draw(self):
+                  return self.cards.pop()
+                </code></pre>
+                <p>Full source available on <a href="https://github.com/buula/card-game" target="_blank">GitHub</a>.</p>
+              </div>
             </div>
+          
             <div class="project-wrapper__image">
               <div class="thumbnail rounded">
                 <img src="./assets/cardgame.png" class="img-fluid" alt="Card Game" width="1366" height="767" />
               </div>
             </div>
           </article>
+          
 
           <article class="row">
             <div class="project-wrapper__text">
